@@ -33,16 +33,16 @@ const Section3 = () => {
                                     <div className="card" style={{ width: "18rem" }}>
                                         <img
                                             className="card-img-top"
-                                            src="5079214.jpg"
+                                            src="slider1.jpg"
                                             alt="Card image cap"
                                         />
                                         <div className="card-body">
                                             <h5 className="card-title">{service.title}</h5>
-                                            <p className="card-text">{service.description}</p>
+                                            <p className="card-text">{service.description.substr(0, 100)}...</p>
                                             <Link
                                                 className="btn btn-primary"
                                                 to="/services/serviceDescription"
-                                                state={{ title: service.title }}
+                                                state={{ title: service.title, description: service.description }}
                                             >
                                                 Read More
                                             </Link>
