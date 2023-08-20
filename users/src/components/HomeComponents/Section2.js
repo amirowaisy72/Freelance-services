@@ -8,7 +8,7 @@ const Section2 = () => {
                 <h1><b>What We Do for Business</b></h1>
                 <hr style={{ width: '150px', color: 'red' }}></hr>
                 <p>
-                    Top Quality Line is an Embroidery Digitizing & Screen Printing Vector Art providing Source that serves all Embroidery Companies such as Apparel Manufactures, Embroiders, Sport Shops and Custom Promotional Products in United States, Canada, United Kingdom and Australia. We also offer Creative Web Designing Services that delivers an Amazing UI Experience to our Clients.
+                Digitize Now is a graphic design brand shop that specializes in vectorizing and digitizing services. We offer quick and efficient vectorization and digitization of logos, illustrations, and other graphics for businesses of all sizes, from small startups to large corporations.
                 </p>
             </center>
         </div>

@@ -10,7 +10,7 @@ const Section5 = () => {
                             <h5 className="font-weight-4 less-mar-1 line-height-4 text-primary opacity-9">Our Pricing</h5>
                             <h2 className="font-weight-6 less-mar-1 line-height-5">We Offer Best Prices</h2>
                             <div className="ce-title-line"></div>
-                            <h6 className="ce-sub-text raleway opacity-7">Top Quality Line offers Simple and Market Best Prices to our Respectable Customers. As being a Best Top Quality Services provider, we always try our Best to give amazingly economical rates, so everyone can easily get benefits by our Best Quality Services and increase their Businesses for sure</h6>
+                            <h6 className="ce-sub-text raleway opacity-7">Digitize Now offers Simple and Market Best Prices to our Respectable Customers. As being a Best Services provider, we always try our Best to give amazingly economical rates, so everyone can easily get benefits by our Best Quality Services and increase their Businesses for sure</h6>
                         </div>
                     </div>
                     <div className="clearfix"></div>
@@ -61,7 +61,7 @@ const Section5 = () => {
                     </div>
                     {/* < />!--end item--> */}
 
-                    <div className="col-md-4">
+                    {/* <div className="col-md-4">
                         <div style={{border:'2px solid black',padding:'5px'}} className="ce-feature-box-13 margin-bottom">
                             <div className="text-box">
                                 <h5>Web Designing</h5>
@@ -81,7 +81,7 @@ const Section5 = () => {
                                 <div className="col-md-12 text-left"> <button className='btn btn-primary'>Order Now</button></div>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                     {/* < />!--end item--> */}
 
                 </div>
