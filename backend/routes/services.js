@@ -27,11 +27,13 @@ router.get("/read", async (req, res) => {
   res.json(services);
 });
 
+
 // {Update Operation} ADMIN
 router.put("/update/:id", async (req, res) => {
   let success = false;
   try {
     const { title, description, photo, price } = req.body; //De-Structure
+
     // Create a new data object
     const newData = {};
     if (title) {
@@ -41,12 +43,12 @@ router.put("/update/:id", async (req, res) => {
       newData.description = description;
     }
     if (photo) {
-      newData.tag = photo;
+      newData.photo = photo;
     }
     if (price) {
-      newData.tag = price;
+      newData.price = price;
     }
-
+    console.log(newData.photo)
     //Find the document to be updated and update it
     let services = await Services.findById(req.params.id);
     if (!services) {

@@ -11,15 +11,15 @@ const Header = () => {
     <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
-          Email : amirowaisy72@gmail.com <br />
-          Mobile : 0316-0609994
+          Email : info@expertsgraphics.com <br />
+          Mobile : +1 (210) 888-9286
           </Navbar.Brand>
         </Container>
       </Navbar>
 
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand as={Link} to="">Digitize Now</Navbar.Brand>
+          <Navbar.Brand as={Link} to="">Experts Graphics</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/services">Services</Nav.Link>
             <Nav.Link as={Link} to="/portfolio">Portfolio</Nav.Link>

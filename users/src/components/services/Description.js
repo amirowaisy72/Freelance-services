@@ -11,7 +11,7 @@ const Description = () => {
       </center>
       <div className="row my-5">
         <div className="col-sm">
-          <img className="card-img-top" src="slider1.jpg" alt="Vector Art Design" />
+          <img className="card-img-top" src={location.state.photo} alt="Vector Art Design" />
         </div>
         <div className="col-sm">
           <p>What we offer in {location.state.title}</p>

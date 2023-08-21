@@ -31,7 +31,7 @@ const Contact = () => {
 
   const handleClick = async (e) => {
     e.preventDefault();
-    if (!data.fname || !data.lname || data.mobile || data.msg) {
+    if (!data.fname || !data.lname || !data.mobile || !data.msg) {
       alert("Please Fill All Fields");
     } else {
       const create = await createMessage(
@@ -43,6 +43,7 @@ const Contact = () => {
       );
       if (create) {
         setData({ fname: "", lname: "", mobile: "", service: "", msg: "" });
+        alert("Your message has been delivered. Team will soon contact back with you.")
       } else {
         alert("Some Error Occured");
       }
@@ -80,7 +81,7 @@ const Contact = () => {
           type="mobile"
           className="mt-2"
           placeholder="Mobile Number"
-          name="fname"
+          name="mobile"
           value={data.mobile}
           onChange={onChange} autoComplete="off"
         />
@@ -94,6 +95,7 @@ const Contact = () => {
           value={data.service}
           onChange={onChange}
         >
+          <option>Select service</option>
           {services.map((service) => {
             return <option key={service._id}>{service.title}</option>;
           })}

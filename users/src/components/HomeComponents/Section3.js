@@ -33,7 +33,7 @@ const Section3 = () => {
                                     <div className="card" style={{ width: "18rem" }}>
                                         <img
                                             className="card-img-top"
-                                            src="slider1.jpg"
+                                            src={service.photo}
                                             alt="Card image cap"
                                         />
                                         <div className="card-body">
@@ -42,7 +42,7 @@ const Section3 = () => {
                                             <Link
                                                 className="btn btn-primary"
                                                 to="/services/serviceDescription"
-                                                state={{ title: service.title, description: service.description }}
+                                                state={{ title: service.title, description: service.description, photo:service.photo }}
                                             >
                                                 Read More
                                             </Link>
