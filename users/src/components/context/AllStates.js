@@ -3,8 +3,8 @@ import context from "./contextCreator";
 
 const AllStates = (props) => {
   //Host
-  const host = "http://localhost:5000";
-  // const host = "https://jade-frantic-fly.cyclic.cloud"
+  // const host = "http://localhost:5000";
+  const host = "https://jade-frantic-fly.cyclic.cloud"
   //States
   const [services, setServices] = useState([]);
   const [portfolio, setPortfolio] = useState([]);
