@@ -19,6 +19,7 @@ import AddPortfolio from "./components/Admin/AddPortfolio";
 import UpdatePortfolio from "./components/Admin/UpdatePortfolio";
 import DeletePortfolio from "./components/Admin/DeletePortfolio";
 import Messages from "./components/Admin/Messages";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -102,6 +103,7 @@ function App() {
               element={<Contact />}
             ></Route>
           </Routes>
+          <Footer />
         </BrowserRouter>
       </AllStates>
     </>
