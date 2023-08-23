@@ -19,9 +19,9 @@ const Services = () => {
   return (
     <>
       <center>
-        <h1>Best Popular Services</h1>
+        <h1 className="mt-2" style={{color:"black", fontSize:"32px"}}>Best Popular Services</h1>
       </center>
-      <div className="container my-5">
+      <div className="container my-3">
         <div className="row">
           {services.map((service) => {
             return (

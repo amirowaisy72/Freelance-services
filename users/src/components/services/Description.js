@@ -21,7 +21,7 @@ const Description = () => {
           </p>
           <Link
             className="btn btn-primary"
-            state={{ service: location.state.title }}
+            state={{ service: location.state.title, photo: location.state.photo }}
             to="/servicePortfolio"
           >
             Portfolio

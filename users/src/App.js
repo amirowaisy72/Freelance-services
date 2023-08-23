@@ -20,13 +20,17 @@ import UpdatePortfolio from "./components/Admin/UpdatePortfolio";
 import DeletePortfolio from "./components/Admin/DeletePortfolio";
 import Messages from "./components/Admin/Messages";
 import Footer from "./components/Footer";
+import Header2 from "./components/Header2";
+import Order from "./components/Order";
+import Faq from "./components/Faq";
 
 function App() {
   return (
     <>
       <AllStates>
         <BrowserRouter>
-          <Header />
+          {/* <Header /> */}
+          <Header2 />
           <Routes>
             <Route exact path="" element={<Home />}></Route>
             <Route exact path="/services" element={<Services />}></Route>
@@ -101,6 +105,16 @@ function App() {
               exact
               path="/contactus"
               element={<Contact />}
+            ></Route>
+            <Route
+              exact
+              path="/order"
+              element={<Order />}
+            ></Route>
+            <Route
+              exact
+              path="/faq"
+              element={<Faq />}
             ></Route>
           </Routes>
           <Footer />

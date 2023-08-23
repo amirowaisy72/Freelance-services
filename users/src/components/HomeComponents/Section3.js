@@ -20,8 +20,8 @@ const Section3 = () => {
         <div style={{ background: '#2F2D2D', color: 'white' }}>
             <center>
                 <br></br>
-                <h5>Our Services</h5>
-                <h1>Best Popular Services</h1>
+                <h5 style={{color:"white", fontSize:"20px"}}>Our Services</h5>
+                <h1 style={{color:"white", fontSize:"32px"}}>Best Popular Services</h1>
                 <hr style={{ width: '150px', color: 'red' }}></hr>
                 <br></br>
                 <br></br>

@@ -53,10 +53,10 @@ const Contact = () => {
   return (
     <div className="container mt-2">
       <center>
-        <h1>Contact Us</h1>
+        <h1 style={{color:"black", fontSize:"32px"}}>Contact Us</h1>
       </center>
       <Form>
-        <div className="row">
+        <div className="row mt-4">
           <div className="col-md">
             <Form.Control
               type="text"
@@ -85,21 +85,6 @@ const Contact = () => {
           value={data.mobile}
           onChange={onChange} autoComplete="off"
         />
-        <label htmlFor="" className="my-2">
-          For which service you need assistance?
-        </label>{" "}
-        <br />
-        <Form.Select
-          className="mb-2"
-          name="service"
-          value={data.service}
-          onChange={onChange}
-        >
-          <option>Select service</option>
-          {services.map((service) => {
-            return <option key={service._id}>{service.title}</option>;
-          })}
-        </Form.Select>
         <Form.Control
           className="mb-2"
           as="textarea"

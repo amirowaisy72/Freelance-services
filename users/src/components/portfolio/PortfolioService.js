@@ -21,9 +21,9 @@ const PortfolioService = () => {
   return (
     <>
       <center>
-        <h1>Our Work in {location.state.service}</h1>
+        <h1 className="mt-2" style={{color:"black", fontSize:"32px"}}>Our Work in {location.state.service}</h1>
       </center>
-      <div className="container my-5">
+      <div className="container my-3">
         <div className="row">
           {portfolio.map((p) => {
             return (
@@ -33,7 +33,7 @@ const PortfolioService = () => {
                     <div className="card" style={{ width: "18rem" }}>
                       <img
                         className="card-img-top"
-                        src="5079214.jpg"
+                        src={location.state.photo}
                         alt="Card image cap"
                       />
                       <div className="card-body">

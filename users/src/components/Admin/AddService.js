@@ -23,6 +23,7 @@ const AddService = () => {
 
     const handleClick = async () => {
         await createService(service.title, service.description, service.photo, service.price)
+        alert("New service item has been added")
     }
 
     return (
@@ -61,7 +62,7 @@ const AddService = () => {
                     value={service.photo}
                 />
 
-                Price in rupees
+                Price in Dollars
                 <MDBInput
                     wrapperClass="mb-4"
                     type="number"

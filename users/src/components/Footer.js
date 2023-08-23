@@ -55,6 +55,19 @@ const Footer = () => {
                         {/* <!--Grid row--> */}
                         <div className="row">
                             {/* <!--Grid column--> */}
+                            <div className="col-lg-5 col-md-6 mb-4 mb-md-0">
+                            <h5 className="text-uppercase">Contact Details</h5>
+                                <ul className="list-unstyled mb-0">
+                                    <li>
+                                    Email : info@expertsgraphics.com
+                                    </li>
+                                    <li>
+                                    Mobile : +1 (210) 888-9286
+                                    </li>
+                                </ul>
+                            </div>
+                            {/* <!--Grid column--> */}
+                            {/* <!--Grid column--> */}
                             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
                                 <h5 className="text-uppercase">Quick Links</h5>
 
@@ -66,12 +79,12 @@ const Footer = () => {
                                         <a href="#!" className="text-white">Privacy policy</a>
                                     </li>
                                     <li>
-                                        <Link to="/contactus">
+                                        <Link to="/order">
                                             <a href="#!" className="text-white">Place an Order</a>
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link to="/contactus">
+                                        <Link to="/order">
                                             <a href="#!" className="text-white">Get a Quote</a>
                                         </Link>
                                     </li>
@@ -90,7 +103,7 @@ const Footer = () => {
                 <div className="text-center p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
                     © 2023 Copyright:
                     <Link to="/">
-                        <a className="text-white" href="https://expertsgraphics.com/">expertsgraphics.com</a>
+                        <a className="text-white" href="https://expertsgraphics.com/"> Experts Graphics</a>
                     </Link>
 
                 </div>

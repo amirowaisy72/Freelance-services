@@ -20,11 +20,11 @@ const Section4 = () => {
         <div>
             <center>
                 <br></br>
-                <h1>Our Quality Work</h1>
+                <h1 style={{color:"black", fontSize:"32px"}}>Our Quality Work</h1>
                 <hr style={{ width: '150px', color: 'red' }}></hr>
                 <br></br>
                 <br></br>
-                <div className="container my-5">
+                <div className="container my-2">
                     <div className="row">
                         {portfolio.map((p) => {
                             return (
@@ -32,7 +32,7 @@ const Section4 = () => {
                                     <div className="card" style={{ width: "18rem" }}>
                                         <img
                                             className="card-img-top"
-                                            src="5079214.jpg"
+                                            src={p.photo}
                                             alt="Card image cap"
                                         />
                                         <div className="card-body">
