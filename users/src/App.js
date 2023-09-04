@@ -3,7 +3,7 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Header from "./components/Header";
-import Services from "./components/services/Services";
+import Services from "./components/HomeComponents/Services";
 import AllStates from "./components/context/AllStates";
 import ServiceDescription from "./components/services/Description";
 import Portfolio from "./components/portfolio/Portfolio";
@@ -23,6 +23,7 @@ import Footer from "./components/Footer";
 import Header2 from "./components/Header2";
 import Order from "./components/Order";
 import Faq from "./components/Faq";
+import Auth from "./components/Admin/Auth";
 
 function App() {
   return (
@@ -39,6 +40,11 @@ function App() {
               exact
               path="/admin"
               element={<AdminHome />}
+            ></Route>
+            <Route
+              exact
+              path="/auth"
+              element={<Auth />}
             ></Route>
             <Route
               exact

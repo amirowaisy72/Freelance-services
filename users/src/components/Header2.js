@@ -9,9 +9,10 @@ import { Link } from "react-router-dom";
 
 const Header2 = () => {
     return (
+        <>
         <Navbar bg="dark" variant="dark" expand="lg" sticky='top'>
             <Container fluid>
-                <Navbar.Brand as={Link} to="" href="#">Home</Navbar.Brand>
+                <Navbar.Brand as={Link} to="" href="#"><img src="Web logo.png"></img></Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -19,10 +20,11 @@ const Header2 = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link as={Link} href="#action2" to="/services">Services</Nav.Link>
-                        <Nav.Link as={Link} href="#action3" to="/portfolio">Portfolio</Nav.Link>
-                        <Nav.Link as={Link} href="#action4" to="/contactus">Contact Us</Nav.Link>
-                        <Nav.Link as={Link} href="#action5" to="/order">Order Now</Nav.Link>
+                        <Nav.Link as={Link} href="#action2" to="/">Home</Nav.Link>
+                        <Nav.Link as={Link} href="#action3" to="/services">Services</Nav.Link>
+                        <Nav.Link as={Link} href="#action4" to="/portfolio">Portfolio</Nav.Link>
+                        <Nav.Link as={Link} href="#action5" to="/contactus">Contact Us</Nav.Link>
+                        <Nav.Link as={Link} href="#action6" to="/order">Order Now</Nav.Link>
                     </Nav>
                     <Form className="d-flex">
                         <Button as={Link} to="/faq" variant="outline-success">FAQ</Button>
@@ -31,6 +33,7 @@ const Header2 = () => {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+        </>
     )
 }
 

@@ -6,6 +6,9 @@ import Section3 from './HomeComponents/Section3'
 import Section4 from './HomeComponents/Section4'
 import Section5 from './HomeComponents/Section5'
 import Contact from './Contact'
+import Features from './HomeComponents/Features'
+import Services from './HomeComponents/Services'
+import Portfolio from './HomeComponents/Portfolio'
 
 const Home = () => {
   return (
@@ -13,9 +16,9 @@ const Home = () => {
     <Slider />
     <Section />
     <Section2 />
-    <Section3 />
-    <br></br><br></br>
-    <Section4 />
+    <Services />
+    <Portfolio />
+    <Features />
     <Section5 />
     <Contact />
     </>

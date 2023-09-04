@@ -1,0 +1,7 @@
+.elementor-2 .elementor-element.elementor-element-128e54c:not(.elementor-motion-effects-element-type-background), .elementor-2 .elementor-element.elementor-element-128e54c > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#FFFFFF;}.elementor-2 .elementor-element.elementor-element-128e54c{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-2 .elementor-element.elementor-element-128e54c > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}/* Start custom CSS for section, class: .elementor-element-128e54c */label,input, textarea, select, p, span{
+     font-family: Poppins !important;
+     margin-top:10px;
+}/* End custom CSS */
+/* Start custom CSS */body{
+    overflow: hidden
+}/* End custom CSS */

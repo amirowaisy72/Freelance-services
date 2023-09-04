@@ -21,8 +21,8 @@ router.post("/create", async (req, res) => {
 });
 
 // {Read/Fetch Operation} Add route/end USER
-router.get("/read", async (req, res) => {
-  const portfolio = await Portfolio.find({}); // fetch all data
+router.get("/read/:title", async (req, res) => {
+  const portfolio = await Portfolio.find({title: req.params.title}); // fetch all data
   res.json(portfolio);
 });
 

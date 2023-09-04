@@ -101,8 +101,8 @@ const AllStates = (props) => {
   };
 
   //Portfolio CRUD
-  const getPortfolio = async () => {
-    const response = await fetch(`${host}/portfolio/read`, {
+  const getPortfolio = async (title) => {
+    const response = await fetch(`${host}/portfolio/read/${title}`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",

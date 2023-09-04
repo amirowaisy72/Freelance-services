@@ -88,6 +88,11 @@ const Footer = () => {
                                             <a href="#!" className="text-white">Get a Quote</a>
                                         </Link>
                                     </li>
+                                    <li>
+                                        <Link to="/auth">
+                                            <a href="#!" className="text-white">Admin Panel</a>
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                             {/* <!--Grid column--> */}
