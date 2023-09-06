@@ -31,7 +31,7 @@ const carouselItems = [
     src: 'Sliders/patches1.jpg',
     alt: 'Image 1',
     text: {
-      title: 'Experts Graphics',
+      title: '',
       description: 'Expert in Custom Patches',
     },
   },
@@ -39,7 +39,7 @@ const carouselItems = [
     src: 'Sliders/slider4.jpg',
     alt: 'Image 2',
     text: {
-      title: 'Experts Graphics',
+      title: '',
       description: 'Expert in Web Designing',
     },
   },
@@ -47,7 +47,7 @@ const carouselItems = [
     src: 'Sliders/slider3.jpg',
     alt: 'Image 3',
     text: {
-      title: 'Experts Graphics',
+      title: '',
       description: 'Expert in Graphics Designing',
     },
   },
@@ -55,7 +55,7 @@ const carouselItems = [
     src: 'Sliders/xyz.jpg',
     alt: 'Image 4',
     text: {
-      title: 'Experts Graphics',
+      title: '',
       description: 'Expert in Vector Art',
     },
   },
