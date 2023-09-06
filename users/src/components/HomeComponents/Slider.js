@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const textStyle = {
   color: 'white',
   position: 'absolute',
-  top: '50%',
+  top: '35%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
   textAlign: 'center',
@@ -14,7 +14,16 @@ const textStyle = {
 };
 
 const titleStyle = {
-  color: 'white', // Set the title text color to white
+  color: 'white',
+  maxWidth: '80%', // Set a maximum width for the title
+  fontSize: '2rem',
+  marginBottom: '1rem', // Add some spacing between title and description
+};
+
+const descriptionStyle = {
+  color: 'white',
+  maxWidth: '80%', // Set a maximum width for the description
+  fontSize: '1.5rem', // Adjust the font size for description
 };
 
 const carouselItems = [
@@ -30,24 +39,24 @@ const carouselItems = [
     src: 'Sliders/slider4.jpg',
     alt: 'Image 2',
     text: {
-        title: 'Experts Graphics',
-        description: 'Expert in Web Designing',
+      title: 'Experts Graphics',
+      description: 'Expert in Web Designing',
     },
   },
   {
     src: 'Sliders/slider3.jpg',
     alt: 'Image 3',
     text: {
-        title: 'Experts Graphics',
-        description: 'Expert in Graphics Designing',
+      title: 'Experts Graphics',
+      description: 'Expert in Graphics Designing',
     },
   },
   {
     src: 'Sliders/xyz.jpg',
     alt: 'Image 4',
     text: {
-        title: 'Experts Graphics',
-        description: 'Expert in Vector Art',
+      title: 'Experts Graphics',
+      description: 'Expert in Vector Art',
     },
   },
 ];
@@ -75,7 +84,7 @@ export const Slider = () => {
             <img src={item.src} className="d-block w-100" alt={item.alt} />
             <div className="carousel-caption" style={textStyle}>
               <h1 style={titleStyle}>{item.text.title}</h1>
-              <p>{item.text.description}</p>
+              <p style={descriptionStyle}>{item.text.description}</p>
             </div>
           </div>
         ))}

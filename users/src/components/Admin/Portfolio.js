@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import contextCreator from "../context/contextCreator";
+import AdminHome from "./AdminHome";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const context = useContext(contextCreator);
@@ -15,28 +17,29 @@ const Portfolio = () => {
     fetchPortfolio();
   }, []); // Or [] if effect doesn't need props or state
 
-  const handleDigitizing = async() => {
+  const handleDigitizing = async () => {
     await getPortfolio("Digitizing");
-  }
+  };
 
-  const handleVectorizing = async() => {
+  const handleVectorizing = async () => {
     await getPortfolio("Vectorizing");
-  }
+  };
 
-  const handleGraphic = async() => {
+  const handleGraphic = async () => {
     await getPortfolio("Graphic Designing");
-  }
+  };
 
-  const handleWeb = async() => {
+  const handleWeb = async () => {
     await getPortfolio("Web Designing");
-  }
+  };
 
-  const handleCustom = async() => {
+  const handleCustom = async () => {
     await getPortfolio("Custom Patches");
-  }
+  };
 
   return (
     <>
+      <AdminHome />
       <section className="portfolio_sec" id="portfolio">
         <div className="container">
           <div className="row">
@@ -52,9 +55,7 @@ const Portfolio = () => {
               <div className="button-group filter-button-group">
                 <button onClick={handleDigitizing}>Digitizing</button>
                 <button onClick={handleVectorizing}>Vectorizing</button>
-                <button onClick={handleGraphic}>
-                  Graphic Designing
-                </button>
+                <button onClick={handleGraphic}>Graphic Designing</button>
                 <button onClick={handleWeb}>Web Designing</button>
                 <button onClick={handleCustom}>Custom Patches</button>
               </div>
@@ -66,7 +67,8 @@ const Portfolio = () => {
                   {portfolio.map((p) => {
                     return (
                       <>
-                        <div key={p._id}
+                        <div
+                          key={p._id}
                           style={{ border: "1px solid #ddd" }}
                           className="col-md-4 grid-item Digitizing"
                           data-category="Digitizing"
@@ -89,6 +91,17 @@ const Portfolio = () => {
                                     title="Car logo Best Top Quality Line Embroidery Digitizing Services"
                                   />
                                 </a>
+                                <Link
+                                  to="/deleteportfolio"
+                                  state={{
+                                    title: p.title,
+                                    description: p.description,
+                                    photo: p.photo,
+                                    id: p._id,
+                                  }}
+                                >
+                                  <i className="fa-solid fa-trash"></i>
+                                </Link>
                               </div>
                             </div>
                           </div>

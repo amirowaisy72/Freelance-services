@@ -44,7 +44,7 @@ const Services = () => {
                 </p>
                 <h4>Embroidery Digitizing</h4>
                 <p>
-                  Top Quality Line offers Best &amp; Top Notch Quality
+                  Experts Graphics offers Best &amp; Top Notch Quality
                   Digitizing Services and We offer all types of Digitizing
                   including 3D Puff, Patches, Applique Digitizing with All the
                   Major Machine Formats (Native files) such as: DST, CND, OFM,
@@ -71,7 +71,7 @@ const Services = () => {
                 </p>
                 <h4>Screen Printing Vector Art</h4>
                 <p>
-                  Top Quality Line offers Best and Top Quality based Vector Art
+                  Experts Graphics offers Best and Top Quality based Vector Art
                   Services and we take raster images (.jpg, .bmp, .tif, .gif,
                   etc.) and convert them to Vector Art formats such as AI, PDF,
                   EPS, AIT, SVG, SVGZ, PSD, CDR etc. with JPG (before after
@@ -98,7 +98,7 @@ const Services = () => {
                 </p>
                 <h4>Graphic Designing</h4>
                 <p>
-                  Top Quality Line offers Unique and Professional logo designing
+                  Experts Graphics offers Unique and Professional logo designing
                   for your upcoming Brand and Flyers for your next Marketing
                   Campaign. Our talented Graphic Designers are ready to bring
                   your Imagination to Reality. A good design is a combination of
@@ -125,7 +125,7 @@ const Services = () => {
                 </p>
                 <h4>Web Designing/Development</h4>
                 <p>
-                  Top Quality Line offers Website Design and Development
+                  Experts Graphics offers Website Design and Development
                   Services including Mobile Web Development Solutions,
                   Responsive Website Designs, Custom E-Commerce and intranet
                   Experiences using the latest and proven Web Technologies. Our
@@ -152,7 +152,7 @@ const Services = () => {
                 </p>
                 <h4>Custom Patches</h4>
                 <p>
-                  Top Quality Line offers Best and Top Quality Custom Patches.
+                  Experts Graphics offers Best and Top Quality Custom Patches.
                   Our Customer's satisfaction is our foremost concern. As we
                   offer Custom Patches for Military, Police, Fire Departments,
                   Security Services, Sports Teams, Motorcycle Clubs, Scholastic

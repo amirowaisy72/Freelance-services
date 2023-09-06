@@ -5,6 +5,7 @@ const Links = () => {
   return (
     <div>
         <button><Link to="/addportfolio">Add New Portfolio Item</Link></button>
+        <button><Link to="/showPortfolio">Show Portfolio</Link></button>
         <button><Link to="/adminmsg">Messages</Link></button>
     </div>
   )

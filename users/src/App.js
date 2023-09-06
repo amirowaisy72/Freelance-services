@@ -6,7 +6,8 @@ import Header from "./components/Header";
 import Services from "./components/HomeComponents/Services";
 import AllStates from "./components/context/AllStates";
 import ServiceDescription from "./components/services/Description";
-import Portfolio from "./components/portfolio/Portfolio";
+import Portfolio from "./components/HomeComponents/Portfolio";
+import AdminPortfolio from "./components/Admin/Portfolio";
 import PortfolioService from "./components/portfolio/PortfolioService";
 import Contact from "./components/Contact";
 import AdminHome from "./components/Admin/AdminHome";
@@ -14,7 +15,6 @@ import AdminServices from "./components/Admin/AdminServices";
 import UpdateService from "./components/Admin/UpdateService";
 import AddService from "./components/Admin/AddService";
 import DeleteService from "./components/Admin/DeleteService";
-import AdminPortfolio from "./components/Admin/AdminPortfolio";
 import AddPortfolio from "./components/Admin/AddPortfolio";
 import UpdatePortfolio from "./components/Admin/UpdatePortfolio";
 import DeletePortfolio from "./components/Admin/DeletePortfolio";
@@ -68,7 +68,7 @@ function App() {
             ></Route>
             <Route
               exact
-              path="/adminportfolio"
+              path="/showPortfolio"
               element={<AdminPortfolio />}
             ></Route>
             <Route
