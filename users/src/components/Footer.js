@@ -11,27 +11,27 @@ const Footer = () => {
                     {/* <!-- Section: Social media --> */}
                     <section className="mb-4">
                         {/* <!-- Facebook --> */}
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        <a target='_blank' className="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/profile.php?id=61550923200452&mibextid=D4KYlr" role="button"
                         ><i className="fab fa-facebook-f"></i
                         ></a>
 
                         {/* <!-- Twitter --> */}
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        <a target='_blank' className="btn btn-outline-light btn-floating m-1" href="https://twitter.com/info_graphics" role="button"
                         ><i className="fab fa-twitter"></i
                         ></a>
 
                         {/* <!-- Google --> */}
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        <a className="btn btn-outline-light btn-floating m-1" href="#" role="button"
                         ><i className="fab fa-google"></i
                         ></a>
 
                         {/* <!-- Instagram --> */}
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        <a target='_blank' className="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/expertsgraphics/" role="button"
                         ><i className="fab fa-instagram"></i
                         ></a>
 
                         {/* <!-- Linkedin --> */}
-                        <a className="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+                        <a target='_blank' className="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/experts-graphics-aa282928b" role="button"
                         ><i className="fab fa-linkedin-in"></i
                         ></a>
 
@@ -45,7 +45,7 @@ const Footer = () => {
                     {/* <!-- Section: Text --> */}
                     <section className="mb-4">
                         <p>
-                            Experts Graphics is a graphic design brand shop that specializes in vectorizing and digitizing services. We offer quick and efficient vectorization and digitization of logos, illustrations, and other graphics for businesses of all sizes, from small startups to large corporations.
+                            Experts Graphics is a graphic design brand company that specializes in vectorizing and digitizing services. We offer quick and efficient vectorization and digitization of logos, illustrations, and other graphics for businesses of all sizes, from small startups to large corporations.
                         </p>
                     </section>
                     {/* <!-- Section: Text --> */}
@@ -69,7 +69,7 @@ const Footer = () => {
                             {/* <!--Grid column--> */}
                             {/* <!--Grid column--> */}
                             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-                                <h5 className="text-uppercase">Quick Links</h5>
+                                <h5 className="text-uppercase text-white">Quick Links</h5>
 
                                 <ul className="list-unstyled mb-0">
                                     <li>

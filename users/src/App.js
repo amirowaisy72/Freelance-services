@@ -24,6 +24,7 @@ import Header2 from "./components/Header2";
 import Order from "./components/Order";
 import Faq from "./components/Faq";
 import Auth from "./components/Admin/Auth";
+import { Slider } from "./components/HomeComponents/Slider";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <BrowserRouter>
           {/* <Header /> */}
           <Header2 />
+          <Slider />
           <Routes>
             <Route exact path="" element={<Home />}></Route>
             <Route exact path="/services" element={<Services />}></Route>

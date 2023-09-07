@@ -9,11 +9,11 @@ import Contact from './Contact'
 import Features from './HomeComponents/Features'
 import Services from './HomeComponents/Services'
 import Portfolio from './HomeComponents/Portfolio'
+import SecurePayments from './HomeComponents/SecurePayments'
 
 const Home = () => {
   return (
     <>
-    <Slider />
     <Section />
     <Section2 />
     <Services />
@@ -21,6 +21,7 @@ const Home = () => {
     <Features />
     <Section5 />
     <Contact />
+    <SecurePayments />
     </>
   )
 }
