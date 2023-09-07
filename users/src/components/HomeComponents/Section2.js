@@ -55,7 +55,7 @@ const Section2 = () => {
           <div className="col-md-6">
             <div className="about_right_img">
               <img
-                src="admin_panel/uploads/home-page/digi.jpg"
+                src="about.png"
                 width="600"
                 height="475"
                 alt=""
