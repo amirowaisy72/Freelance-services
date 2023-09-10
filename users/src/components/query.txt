@@ -1,172 +1,126 @@
 import React, { useState, useEffect } from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
-const textStyle = {
-  color: "white",
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  textAlign: "center",
-  zIndex: "1",
-  fontFamily: "YourFont, sans-serif",
-  fontSize: "3rem", // Default font size for larger screens
-  fontWeight: "bold",
-  width: "80%",
-};
-
-const backgroundStyle = {
-  backgroundColor: "#242047",
-  padding: "10px 20px",
-  borderRadius: "25px",
-};
-
-const goldenTextStyle = {
-  color: "white",
-  textDecoration: "none",
-};
-
-const sliderContainerStyle = {
-  marginTop: "0px",
-};
-
-const imageStyle = {
-  filter: "blur(5px)",
-};
-
-// Define different font sizes for responsive design
-const responsiveTextSizes = {
-  small: "1rem", // Font size for small screens (e.g., mobile)
-  medium: "2rem", // Font size for medium-sized screens (e.g., tablets)
-  large: "3rem", // Default font size for larger screens
-};
-
-const carouselItems = [
-  {
-    src: "Sliders/Mock.png",
-    alt: "Image 1",
-    text: {
-      description: "Embroidery Digitizing",
-    },
-  },
-  {
-    src: "Sliders/slider4.jpg",
-    alt: "Image 2",
-    text: {
-      description: "Vector Arts",
-    },
-  },
-  {
-    src: "Sliders/slider3.jpg",
-    alt: "Image 3",
-    text: {
-      description: "Graphics Designing",
-    },
-  },
-  {
-    src: "Sliders/xyz.jpg",
-    alt: "Image 4",
-    text: {
-      description: "Web Designing/Development",
-    },
-  },
-];
-
-export const Slider = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [fontSize, setFontSize] = useState(responsiveTextSizes.large);
-
-  const handleSlideChange = (index) => {
-    setActiveIndex(index);
-  };
+const Header2 = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Track mobile menu state
 
   useEffect(() => {
-    const handleResize = () => {
-      // Determine the appropriate font size based on screen width
-      if (window.innerWidth <= 768) {
-        setFontSize(responsiveTextSizes.small);
-      } else if (window.innerWidth <= 1024) {
-        setFontSize(responsiveTextSizes.medium);
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
       } else {
-        setFontSize(responsiveTextSizes.large);
+        setIsScrolled(false);
       }
     };
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener("scroll", handleScroll);
 
-    // Initial font size calculation
-    handleResize();
-
-    // Clean up the event listener on component unmount
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const responsiveTextStyle = {
-    ...textStyle,
-    fontSize,
+  const navbarStyles = {
+    backgroundColor: isScrolled || isMobileMenuOpen ? "#242047" : "transparent",
+    position: "fixed",
+    width: "100%",
+    zIndex: "999",
+    transition: "background-color 0.3s",
+    height: isScrolled || isMobileMenuOpen ? "100px" : "auto",
+  };
+
+  const navTextStyles = {
+    color: isScrolled || isMobileMenuOpen ? "white" : "white",
+    transition: "color 0.3s",
+  };
+
+  const buttonStyles = {
+    color: isScrolled || isMobileMenuOpen ? "white" : "white",
+    borderColor: isScrolled || isMobileMenuOpen ? "white" : "white",
+    backgroundColor: "transparent",
+  };
+
+  const navbarCollapseStyles = {
+    backgroundColor: isMobileMenuOpen ? "#242047" : "transparent", // Apply background color to navbar content when mobile menu is open
   };
 
   return (
-    <div className="slider-container" style={sliderContainerStyle}>
-      <div
-        id="carouselExampleControls"
-        className="carousel slide"
-        data-bs-ride="carousel"
-        onSlide={handleSlideChange}
+    <div className="header">
+      <Navbar
+        style={navbarStyles}
+        variant="dark"
+        expand="lg"
+        sticky="top"
+        expanded={isMobileMenuOpen} // Set expanded prop based on mobile menu state
       >
-        <div className="carousel-inner">
-          {carouselItems.map((item, index) => (
-            <div
-              key={index}
-              className={`carousel-item ${
-                index === activeIndex ? "active" : ""
-              }`}
+        <Container fluid style={navbarCollapseStyles}>
+          <Navbar.Brand as={Link} to="" href="#" style={{ marginTop: "-10px" }}>
+            <img
+              src="Web logo.png"
+              alt="Logo"
+              className="logo-img"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="navbarScroll"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} // Toggle mobile menu state
+          />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
             >
-              <img
-                src={item.src}
-                className="d-block w-100"
-                alt={item.alt}
-                style={imageStyle}
-              />
-              <div className="carousel-caption" style={responsiveTextStyle}>
-                <p>
-                  <span style={backgroundStyle}>
-                    <span style={goldenTextStyle}>{item.text.description}</span>
-                  </span>
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-        <button
-          className="carousel-control-prev"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="prev"
-        >
-          <span
-            className="carousel-control-prev-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Previous</span>
-        </button>
-        <button
-          className="carousel-control-next"
-          type="button"
-          data-bs-target="#carouselExampleControls"
-          data-bs-slide="next"
-        >
-          <span
-            className="carousel-control-next-icon"
-            aria-hidden="true"
-          ></span>
-          <span className="visually-hidden">Next</span>
-        </button>
-      </div>
+              <Nav.Link as={Link} to="/" style={navTextStyles}>
+                Home
+              </Nav.Link>
+              <Nav.Link as={Link} to="/services" style={navTextStyles}>
+                Services
+              </Nav.Link>
+              <Nav.Link as={Link} to="/portfolio" style={navTextStyles}>
+                Portfolio
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contactus" style={navTextStyles}>
+                Contact Us
+              </Nav.Link>
+              <Nav.Link as={Link} to="/order" style={navTextStyles}>
+                Order Now
+              </Nav.Link>
+            </Nav>
+            <Form className="d-flex">
+              <Button
+                as={Link}
+                to="/faq"
+                variant="outline-success"
+                style={buttonStyles}
+              >
+                FAQ
+              </Button>
+              <Button
+                as={Link}
+                to="/order"
+                className="mx-2"
+                variant="outline-success"
+                style={buttonStyles}
+              >
+                GET A QUOTE
+              </Button>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </div>
   );
 };
 
+export default Header2;
 
-ok now please un
+
+if user scrolls dwn, there should be displayed an upward arrow on which, if user clicks, it goes to top
+modify the code and write full component
