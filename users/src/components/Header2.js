@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 
 const Header2 = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Track mobile menu state
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +17,13 @@ const Header2 = () => {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
+      }
+
+      // Determine whether to show the scroll-to-top button
+      if (window.scrollY > 500) {
+        setShowScrollToTop(true);
+      } else {
+        setShowScrollToTop(false);
       }
     };
 
@@ -47,7 +55,11 @@ const Header2 = () => {
   };
 
   const navbarCollapseStyles = {
-    backgroundColor: isMobileMenuOpen ? "#242047" : "transparent", // Apply background color to navbar content when mobile menu is open
+    backgroundColor: isMobileMenuOpen ? "#242047" : "transparent",
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -57,19 +69,15 @@ const Header2 = () => {
         variant="dark"
         expand="lg"
         sticky="top"
-        expanded={isMobileMenuOpen} // Set expanded prop based on mobile menu state
+        expanded={isMobileMenuOpen}
       >
         <Container fluid style={navbarCollapseStyles}>
           <Navbar.Brand as={Link} to="" href="#" style={{ marginTop: "-10px" }}>
-            <img
-              src="Web logo.png"
-              alt="Logo"
-              className="logo-img"
-            />
+            <img src="Web logo.png" alt="Logo" className="logo-img" />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbarScroll"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} // Toggle mobile menu state
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           />
           <Navbar.Collapse id="navbarScroll">
             <Nav
@@ -115,6 +123,29 @@ const Header2 = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+
+      {/* Scroll-to-top button */}
+      {showScrollToTop && (
+        <Button
+          className="scroll-to-top-button"
+          variant="outline-success"
+          onClick={scrollToTop}
+          style={{
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            zIndex: "1000",
+          }}
+        >
+          <span
+            role="img"
+            aria-label="Scroll to top"
+            style={{ fontSize: "24px" }}
+          >
+            ↑
+          </span>
+        </Button>
+      )}
     </div>
   );
 };

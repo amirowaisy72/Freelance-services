@@ -15,7 +15,7 @@ const Section = () => {
   }, []);
 
   return (
-    <div className='mt-2' style={{
+    <div className='' style={{
       background: '#242047',
       color: 'white',
       padding: '50px',

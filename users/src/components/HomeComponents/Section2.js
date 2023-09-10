@@ -14,7 +14,6 @@ const Section2 = () => {
     "We make sure each and every work is completed with utmost care and attention to details. The Karmic cycle of Experts Graphics Business keeps our Clients happy",
     "and wins us more work and admiration. We take pride in our in-house Team of Professionals and constantly updated and equipped work station.",
     "We will assist you from start to end. Working hard with integrity and dedication, we promise to deliver you 100% customer satisfaction.",
-    "With the trusted name of Experts Graphics you can be assured that your experience will be worry free.",
   ];
 
   useEffect(() => {

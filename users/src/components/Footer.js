@@ -56,7 +56,7 @@ const Footer = () => {
                         <div className="row">
                             {/* <!--Grid column--> */}
                             <div className="col-lg-5 col-md-6 mb-4 mb-md-0">
-                            <h5 className="text-uppercase">Contact Details</h5>
+                            <h5 className="text-white text-uppercase">Contact Details</h5>
                                 <ul className="list-unstyled mb-0">
                                     <li>
                                     Email : info@expertsgraphics.com
@@ -68,7 +68,7 @@ const Footer = () => {
                             </div>
                             {/* <!--Grid column--> */}
                             {/* <!--Grid column--> */}
-                            <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+                            <div className="col-lg-2 col-md-6 mb-4 mb-md-0">
                                 <h5 className="text-uppercase text-white">Quick Links</h5>
 
                                 <ul className="list-unstyled mb-0">
@@ -106,9 +106,9 @@ const Footer = () => {
 
                 {/* <!-- Copyright --> */}
                 <div className="text-center p-3" style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}>
-                    © 2023 Copyright:
+                    
                     <Link to="/">
-                        <a className="text-white" href="https://expertsgraphics.com/"> Experts Graphics</a>
+                        <a className="text-white" href="#">© 2023 Copyright : Experts Graphics</a>
                     </Link>
 
                 </div>
