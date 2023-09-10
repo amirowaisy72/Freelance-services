@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const textStyle = {
   color: "white",
@@ -9,22 +9,35 @@ const textStyle = {
   textAlign: "center",
   zIndex: "1",
   fontFamily: "YourFont, sans-serif",
-  fontSize: "2rem", // Adjust the font size for text
+  fontSize: "3rem", // Default font size for larger screens
   fontWeight: "bold",
-  width: "80%", // Set a maximum width for the text
+  width: "80%",
+};
+
+const backgroundStyle = {
+  backgroundColor: "#242047",
+  padding: "10px 20px",
+  borderRadius: "25px",
 };
 
 const goldenTextStyle = {
-  color: "gold", // Change the text color to gold
-  textDecoration: "underline lightblue", // Add underline with light blue color
+  color: "white",
+  textDecoration: "none",
 };
 
 const sliderContainerStyle = {
-  marginTop: "0px", // Adjust the margin-top to move the slider content below the header
+  marginTop: "0px",
 };
 
 const imageStyle = {
-  filter: "blur(5px)", // Apply a 5px blur to the images
+  filter: "blur(0px)",
+};
+
+// Define different font sizes for responsive design
+const responsiveTextSizes = {
+  small: "1rem", // Font size for small screens (e.g., mobile)
+  medium: "2rem", // Font size for medium-sized screens (e.g., tablets)
+  large: "3rem", // Default font size for larger screens
 };
 
 const carouselItems = [
@@ -32,41 +45,66 @@ const carouselItems = [
     src: "Sliders/Mock.png",
     alt: "Image 1",
     text: {
-      title: "Experts Graphics",
-      description: "Expert in Web Digitizing",
+      description: "Embroidery Digitizing",
     },
   },
   {
     src: "Sliders/slider4.jpg",
     alt: "Image 2",
     text: {
-      title: "Experts Graphics",
-      description: "Expert in Web Designing",
+      description: "Vector Arts",
     },
   },
   {
     src: "Sliders/slider3.jpg",
     alt: "Image 3",
     text: {
-      title: "Experts Graphics",
-      description: "Expert in Graphics Designing",
+      description: "Graphics Designing",
     },
   },
   {
     src: "Sliders/xyz.jpg",
     alt: "Image 4",
     text: {
-      title: "Experts Graphics",
-      description: "Expert in Vector Art",
+      description: "Web Designing/Development",
     },
   },
 ];
 
 export const Slider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [fontSize, setFontSize] = useState(responsiveTextSizes.large);
 
   const handleSlideChange = (index) => {
     setActiveIndex(index);
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      // Determine the appropriate font size based on screen width
+      if (window.innerWidth <= 768) {
+        setFontSize(responsiveTextSizes.small);
+      } else if (window.innerWidth <= 1024) {
+        setFontSize(responsiveTextSizes.medium);
+      } else {
+        setFontSize(responsiveTextSizes.large);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Initial font size calculation
+    handleResize();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const responsiveTextStyle = {
+    ...textStyle,
+    fontSize,
   };
 
   return (
@@ -91,11 +129,12 @@ export const Slider = () => {
                 alt={item.alt}
                 style={imageStyle}
               />
-              <div className="carousel-caption" style={textStyle}>
-                <h1>
-                  <span style={goldenTextStyle}>{item.text.title}</span>
-                </h1>
-                <p>{item.text.description}</p>
+              <div className="carousel-caption" style={responsiveTextStyle}>
+                <p>
+                  <span style={backgroundStyle}>
+                    <span style={goldenTextStyle}>{item.text.description}</span>
+                  </span>
+                </p>
               </div>
             </div>
           ))}
