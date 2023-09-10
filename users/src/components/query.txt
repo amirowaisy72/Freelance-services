@@ -1,0 +1,246 @@
+import React, { useContext, useEffect } from "react";
+import contextCreator from "../context/contextCreator";
+
+const Portfolio = () => {
+  const context = useContext(contextCreator);
+  const { portfolio, getPortfolio } = context;
+
+  //Load Portfolio
+  useEffect(() => {
+    async function fetchPortfolio() {
+      // You can await here
+      await getPortfolio("Digitizing");
+      // ...
+    }
+    fetchPortfolio();
+  }, []); // Or [] if effect doesn't need props or state
+
+  const handleDigitizing = async() => {
+    await getPortfolio("Digitizing");
+  }
+
+  const handleVectorizing = async() => {
+    await getPortfolio("Vectorizing");
+  }
+
+  const handleGraphic = async() => {
+    await getPortfolio("Graphic Designing");
+  }
+
+  const handleWeb = async() => {
+    await getPortfolio("Web Designing");
+  }
+
+  const handleCustom = async() => {
+    await getPortfolio("Custom Patches");
+  }
+
+  return (
+    <>
+      <section className="portfolio_sec" id="portfolio">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-8 offset-md-2">
+              <div className="title">
+                <h3>Our portfolio</h3>
+                <div className="underline"></div>
+                <p>Have a look to some of our Quality Work</p>
+              </div>
+            </div>
+            <div className="w-100"></div>
+            <div className="col-md-12">
+              <div className="button-group filter-button-group">
+                <button onClick={handleDigitizing}>Digitizing</button>
+                <button onClick={handleVectorizing}>Vectorizing</button>
+                <button onClick={handleGraphic}>
+                  Graphic Designing
+                </button>
+                <button onClick={handleWeb}>Web Designing</button>
+                <button onClick={handleCustom}>Custom Patches</button>
+              </div>
+            </div>
+            <div className="w-100"></div>
+            <div className="col-md-12">
+              <div className="grid popup-gallery">
+                <div className="row">
+                  {portfolio.map((p) => {
+                    return (
+                      <>
+                        <div key={p._id}
+                          style={{ border: "1px solid #ddd" }}
+                          className="col-md-4 grid-item Digitizing"
+                          data-category="Digitizing"
+                        >
+                          <div className="item-inner">
+                            <div className="overlay">
+                              <div className="view-list">
+                                <a
+                                  href="#"
+                                  data-toggle="lightbox"
+                                  data-gallery="example-gallery"
+                                  className="item popup-link"
+                                >
+                                  <img
+                                    src={p.photo}
+                                    width="375"
+                                    height="355"
+                                    style={{ maxHeight: "100% !important" }}
+                                    alt="Car logo Best Top Quality Line Embroidery Digitizing Services"
+                                    title="Car logo Best Top Quality Line Embroidery Digitizing Services"
+                                  />
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default Portfolio;
+
+
+this is my one component
+
+
+import React, { useState, useEffect } from "react";
+import Button from "react-bootstrap/Button";
+import Container from "react-bootstrap/Container";
+import Form from "react-bootstrap/Form";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
+
+const Header2 = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false); // Track mobile menu state
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navbarStyles = {
+    backgroundColor: isScrolled || isMobileMenuOpen ? "green" : "transparent",
+    position: "fixed",
+    width: "100%",
+    zIndex: "999",
+    transition: "background-color 0.3s",
+    height: isScrolled || isMobileMenuOpen ? "100px" : "auto",
+  };
+
+  const navTextStyles = {
+    color: isScrolled || isMobileMenuOpen ? "white" : "white",
+    transition: "color 0.3s",
+  };
+
+  const buttonStyles = {
+    color: isScrolled || isMobileMenuOpen ? "white" : "white",
+    borderColor: isScrolled || isMobileMenuOpen ? "white" : "white",
+    backgroundColor: "transparent",
+  };
+
+  const navbarCollapseStyles = {
+    backgroundColor: isMobileMenuOpen ? "green" : "transparent", // Apply background color to navbar content when mobile menu is open
+  };
+
+  return (
+    <div className="header">
+      <Navbar
+        style={navbarStyles}
+        variant="dark"
+        expand="lg"
+        sticky="top"
+        expanded={isMobileMenuOpen} // Set expanded prop based on mobile menu state
+      >
+        <Container fluid style={navbarCollapseStyles}>
+          <Navbar.Brand as={Link} to="" href="#" style={{ marginTop: "-10px" }}>
+            <img
+              src="Web logo.png"
+              alt="Logo"
+              className="logo-img"
+            />
+          </Navbar.Brand>
+          <Navbar.Toggle
+            aria-controls="navbarScroll"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} // Toggle mobile menu state
+          />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="me-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Nav.Link as={Link} to="/" style={navTextStyles}>
+                Home
+              </Nav.Link>
+              <Nav.Link as={Link} to="/services" style={navTextStyles}>
+                Services
+              </Nav.Link>
+              <Nav.Link as={Link} to="/portfolio" style={navTextStyles}>
+                Portfolio
+              </Nav.Link>
+              <Nav.Link as={Link} to="/contactus" style={navTextStyles}>
+                Contact Us
+              </Nav.Link>
+              <Nav.Link as={Link} to="/order" style={navTextStyles}>
+                Order Now
+              </Nav.Link>
+            </Nav>
+            <Form className="d-flex">
+              <Button
+                as={Link}
+                to="/faq"
+                variant="outline-success"
+                style={buttonStyles}
+              >
+                FAQ
+              </Button>
+              <Button
+                as={Link}
+                to="/order"
+                className="mx-2"
+                variant="outline-success"
+                style={buttonStyles}
+              >
+                GET A QUOTE
+              </Button>
+            </Form>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+    </div>
+  );
+};
+
+export default Header2;
+
+
+This is my another component
+
+I want following changes in Second component
+1-Pick The background color in first component (background color of Digitizing Vectorizing Graphic Designing Web Designing Custom Patches) 
+2- in second component, when we slide down and navbar color changes to green, change this green color into the color you just picked, i.e (background color of Digitizing Vectorizing Graphic Designing Web Designing Custom Patches)
+
+write full second component code. i will just copy past
+
