@@ -62,14 +62,6 @@ const Header2 = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const logoStyles = {
-    marginTop: isMobileMenuOpen ? "-30px" : "-25px", // Adjust the logo margin for mobile view
-  };
-
-  const mobileMenuIconStyles = {
-    marginTop: isMobileMenuOpen ? "-30px" : "-40px", // Adjust the mobile menu icon margin for mobile view
-  };
-
   return (
     <div className="header">
       <Navbar
@@ -80,13 +72,12 @@ const Header2 = () => {
         expanded={isMobileMenuOpen}
       >
         <Container fluid style={navbarCollapseStyles}>
-          <Navbar.Brand as={Link} to="" href="#" style={logoStyles}>
+          <Navbar.Brand as={Link} to="" href="#" style={{ marginTop: "-10px" }}>
             <img src="Web logo.png" alt="Logo" className="logo-img" />
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="navbarScroll"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            style={mobileMenuIconStyles}
           />
           <Navbar.Collapse id="navbarScroll">
             <Nav
