@@ -27,7 +27,7 @@ const Header2 = () => {
   }, []);
 
   const navbarStyles = {
-    backgroundColor: isScrolled || isMobileMenuOpen ? "green" : "transparent",
+    backgroundColor: isScrolled || isMobileMenuOpen ? "#242047" : "transparent",
     position: "fixed",
     width: "100%",
     zIndex: "999",
@@ -47,7 +47,7 @@ const Header2 = () => {
   };
 
   const navbarCollapseStyles = {
-    backgroundColor: isMobileMenuOpen ? "green" : "transparent", // Apply background color to navbar content when mobile menu is open
+    backgroundColor: isMobileMenuOpen ? "#242047" : "transparent", // Apply background color to navbar content when mobile menu is open
   };
 
   return (

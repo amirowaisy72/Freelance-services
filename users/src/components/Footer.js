@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <>
             {/* <!-- Footer --> */}
-            <footer className="bg-dark text-center text-white mt-5">
+            <footer style={{backgroundColor: "#242047"}} className="text-center text-white mt-5">
                 {/* <!-- Grid container --> */}
                 <div className="container p-4">
                     {/* <!-- Section: Social media --> */}

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const Section2 = () => {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const content = [
     "Experts Graphics is one of the Leading Company that provides Best Quality Services of Embroidery Digitizing,",
     "Screen Printing Vector Art, Graphic Designing, Web Design/Development and Custom Patches in all across the World.",
@@ -21,7 +21,7 @@ const Section2 = () => {
     let index = 0;
     let timer = setInterval(() => {
       if (index < content.length) {
-        setText((prevText) => prevText + content[index] + ' ');
+        setText((prevText) => prevText + content[index] + " ");
         index++;
       } else {
         clearInterval(timer);
@@ -54,18 +54,13 @@ const Section2 = () => {
           </div>
           <div className="col-md-6">
             <div className="about_right_img">
-              <img
-                src="about.png"
-                width="600"
-                height="475"
-                alt=""
-              />
+              <img src="about.png" width="600" height="475" alt="" />
             </div>
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default Section2;

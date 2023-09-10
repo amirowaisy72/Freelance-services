@@ -6,7 +6,7 @@ const Services = () => {
       <section
         className="services "
         id="services"
-        style={{ paddingBottom: "80px" }}
+        style={{ paddingBottom: "80px", backgroundColor: "#242047" }}
       >
         <div className="container">
           <div className="row">

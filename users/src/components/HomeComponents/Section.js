@@ -16,7 +16,7 @@ const Section = () => {
 
   return (
     <div className='mt-2' style={{
-      background: '#FF5733',
+      background: '#242047',
       color: 'white',
       padding: '50px',
     }}>
