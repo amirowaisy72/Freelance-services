@@ -35,6 +35,11 @@ const Portfolio = () => {
     await getPortfolio("Custom Patches");
   }
 
+  useEffect(() => {
+    // Scroll to the top when the Service component mounts
+    window.scrollTo(10, 0);
+  }, []);
+
   return (
     <>
       <section className="portfolio_sec" id="portfolio">

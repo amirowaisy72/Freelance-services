@@ -51,7 +51,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mt-2">
+    <div className="container mt-2" id="contatcus">
       <center>
         <h1 style={{color:"black", fontSize:"32px"}}>Contact Us</h1>
       </center>

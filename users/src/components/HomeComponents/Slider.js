@@ -41,31 +41,32 @@ const responsiveTextSizes = {
 
 const carouselItems = [
   {
-    src: "Sliders/Mock.png",
+    src: "Sliders/slider1.png",
     alt: "Image 1",
     text: {
-      description: "Embroidery Digitizing",
+      description1: "Best Quality Digitizing,",
+      description2: "Vector Art and IT Services Provider",
     },
   },
   {
-    src: "Sliders/slider4.jpg",
+    src: "Sliders/slider2.jpg",
     alt: "Image 2",
     text: {
-      description: "Vector Arts",
+      description1: "Vector Arts",
     },
   },
   {
     src: "Sliders/slider3.jpg",
     alt: "Image 3",
     text: {
-      description: "Graphics Designing",
+      description1: "Graphics Designing",
     },
   },
   {
-    src: "Sliders/xyz.jpg",
+    src: "Sliders/slider4.jpg",
     alt: "Image 4",
     text: {
-      description: "Web Designing/Development",
+      description1: "Web Designing/Development",
     },
   },
 ];
@@ -85,12 +86,12 @@ export const Slider = () => {
       // Determine the appropriate font size and text position based on screen width
       if (window.innerWidth <= 768) {
         setFontSize(responsiveTextSizes.small);
-        setTextTop("65%"); // Move text down for small screens
+        setTextTop("50%"); // Move text down for small screens
         setTextLeft("50%"); // Center text for small screens
       } else {
         setFontSize(responsiveTextSizes.large);
-        setTextTop("20%"); // Move text up for larger screens
-        setTextLeft("30%"); // Move text slightly to the left for larger screens
+        setTextTop("50%"); // Move text up for larger screens
+        setTextLeft("50%"); // Move text slightly to the left for larger screens
       }
     };
 
@@ -137,7 +138,17 @@ export const Slider = () => {
               <div className="carousel-caption" style={responsiveTextStyle}>
                 <p>
                   <span style={backgroundStyle}>
-                    <span style={goldenTextStyle}>{item.text.description}</span>
+                    <span style={goldenTextStyle}>
+                      {item.text.description1}{" "}
+                      {item.text.description2 ? (
+                        <>
+                          <br />
+                          <br /> {item.text.description2}
+                        </>
+                      ) : (
+                        ""
+                      )}
+                    </span>
                   </span>
                 </p>
               </div>

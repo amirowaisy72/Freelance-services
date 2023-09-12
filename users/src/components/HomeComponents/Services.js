@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Services = () => {
+
   return (
     <>
       <section
-        className="services "
+        className="services"
         id="services"
         style={{ paddingBottom: "80px", backgroundColor: "#242047" }}
       >
@@ -12,7 +13,7 @@ const Services = () => {
           <div className="row">
             <div className="col-md-10">
               <div className="title">
-                <h3>we offer quality services</h3>
+                <h3 id="">we offer quality services</h3>
                 <div className="underline"></div>
                 <p>
                   Our Services are 100% Quality assured and free of Glitches and

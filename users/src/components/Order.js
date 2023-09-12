@@ -50,7 +50,7 @@ const Order = () => {
         }
     };
     return (
-        <div className="container mt-2">
+        <div className="container mt-2" id="order">
             <center>
                 <h1 style={{color:"black", fontSize:"32px"}}>Order/Quote</h1>
             </center>
